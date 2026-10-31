@@ -56,9 +56,12 @@ nav a:hover{background:var(--surface-2);color:var(--text)}
 .hero-grid>*,.contact-grid>*{min-width:0}
 .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
 .eyebrow{font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:10px 0 14px}
+h1{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;font-weight:700;letter-spacing:-.015em;margin:10px 0 12px}
+.pillars{display:flex;flex-wrap:wrap;gap:6px 0;margin:0 0 18px;font-size:1rem;font-weight:600;color:var(--brand)}
+.pillars span{padding-right:14px;margin-right:14px;border-right:2px solid var(--accent);line-height:1}
+.pillars span:last-child{border-right:0;margin-right:0;padding-right:0}
 h1 .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
+.lead{color:var(--muted);font-size:1.02rem;max-width:58ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
@@ -195,8 +198,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Supply chain manager · San Jose, CA</span>
-      <h1>Running <span class="grad">resilient supply chains</span>: sourcing, suppliers and inventory.</h1>
+      <span class="eyebrow">Private label · Automotive aftermarket · San Jose, CA</span>
+      <h1>Supply Chain <span class="grad">Manager</span></h1>
+      <div class="pillars" aria-label="Focus areas"><span>Planning</span><span>Supplier Management</span><span>Inventory</span><span>Sourcing</span></div>
       <p class="lead">Supply chain manager with 12+ years across the automotive aftermarket, consulting and manufacturing. I lead sourcing, supplier management and inventory strategy for a private-label division with $120M in revenue and $60M+ in annual spend, turning supplier and inventory challenges into lower cost, healthier inventory and reliable supply.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>

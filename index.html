@@ -52,9 +52,9 @@ nav a:hover{background:var(--surface-2);color:var(--text)}
 .theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:.9rem}
 
 /* hero */
-.hero{padding:64px 0 40px}
+.hero{padding:36px 0 20px}
 .hero-grid>*,.contact-grid>*{min-width:0}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
 .eyebrow{font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
 h1{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;font-weight:700;letter-spacing:-.015em;margin:10px 0 12px}
 .pillars{display:flex;flex-wrap:wrap;gap:6px 0;margin:0 0 18px;font-size:1rem;font-weight:600;color:var(--brand)}
@@ -78,14 +78,14 @@ h1 .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-b
 .avatar span{color:var(--muted);font-size:.9rem}
 pre.code{font-family:"JetBrains Mono",monospace;font-size:.8rem;line-height:1.7;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:14px;overflow-x:auto;color:var(--text)}
 .k{color:var(--brand-2)} .s{color:var(--accent)}
-.widgets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.widgets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
 .widget{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px}
 .widget .n{font-size:1.25rem;font-weight:800;color:var(--brand)}
 .widget .l{font-size:.74rem;color:var(--muted);line-height:1.3;margin-top:2px}
 
 /* sections */
-section{padding:56px 0}
-.sec-head{margin-bottom:28px}
+section{padding:36px 0}
+.sec-head{margin-bottom:20px}
 .sec-head .eyebrow{display:block}
 .sec-head h2{font-size:clamp(1.6rem,3.2vw,2.1rem);letter-spacing:-.01em;font-weight:800}
 .sec-head p{color:var(--muted);max-width:62ch;margin-top:6px}
@@ -154,13 +154,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   .widgets{grid-template-columns:1fr 1fr 1fr}
 }
 
-.portrait{position:relative;aspect-ratio:4/4.4;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--brand),var(--brand-2));border:1px solid var(--line)}
+.portrait{position:relative;width:200px;height:220px;flex:none;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--brand),var(--brand-2));border:1px solid var(--line)}
 .portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .portrait .ini{display:none}
 .portrait.nophoto{display:grid;place-items:center}
 .portrait.nophoto .ini{display:block;color:#fff;font-weight:800;font-size:4rem;letter-spacing:.04em}
-.who{margin:14px 0 0}.who b{display:block;font-size:1.1rem}.who span{color:var(--muted);font-size:.92rem}
-.flowsec{padding:20px 0 8px}
+.idrow{display:flex;gap:18px;align-items:center}
+.who b{display:block;font-size:1.15rem;line-height:1.25}.who span{display:block;color:var(--muted);font-size:.92rem;margin-top:4px}.who .loc{font-size:.84rem;margin-top:10px;color:var(--brand);font-weight:600}
+.flowsec{padding:12px 0 0}
 .flow{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
 .step{padding:18px 16px;position:relative;border-right:1px solid var(--line)}
 .step:last-child{border-right:0}
@@ -173,6 +174,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 @media (max-width:900px){.flow{grid-template-columns:repeat(2,1fr)}.step{border-bottom:1px solid var(--line)}.step::after{display:none}}
 @media (max-width:520px){.flow{grid-template-columns:1fr}}
 .hero{background:radial-gradient(900px 300px at 85% -10%,var(--glow),transparent)}
+.about-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:stretch}
+.about-grid>*{min-width:0}
+.about .stats{grid-template-columns:repeat(2,1fr);grid-auto-rows:1fr;margin-top:0;height:100%}.stat{display:flex;flex-direction:column;justify-content:center}
+.about p{max-width:none}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.portrait{width:150px;height:165px}}
+@media (max-width:480px){.portrait{width:120px;height:132px}.idrow{gap:14px}.widget .n{font-size:1.05rem}}
 </style>
 </head>
 <body>
@@ -213,8 +220,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     </div>
 
     <aside class="card-hero reveal" aria-label="Profile">
-      <div class="portrait"><img src="photo.jpg" alt="Pratik Mehta, Supply Chain Manager" onerror="this.parentNode.classList.add('nophoto');this.remove()"><span class="ini">PM</span></div>
-      <div class="who"><b>Pratik Praveen Mehta</b><span>Supply Chain Manager · Private Label</span></div>
+      <div class="idrow"><div class="portrait"><img src="photo.jpg" alt="Pratik Mehta, Supply Chain Manager" onerror="this.parentNode.classList.add('nophoto');this.remove()"><span class="ini">PM</span></div>
+      <div class="who"><b>Pratik Praveen Mehta</b><span>Supply Chain Manager, Private Label Division</span><span class="loc">San Jose, California</span></div></div>
       <div class="widgets">
         <div class="widget"><div class="n">$120M</div><div class="l">division revenue</div></div>
         <div class="widget"><div class="n">$60M+</div><div class="l">annual spend</div></div>
@@ -240,16 +247,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 <section id="about" class="about">
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">About</span><h2>About me</h2></div>
-    <div class="reveal">
-      <p>I started as an electrical engineer, then moved into software, an MBA and supply chain consulting. Today I work in the private-label division of an automotive aftermarket distributor with $120M in revenue and $60M+ in annual spend, covering sourcing, supplier negotiation, new product introduction, inventory and product lifecycle.</p>
-      <p>I also own the roadmap for a catalog platform used by thousands of customers and over a hundred suppliers, and I build forecasting models and AI agents that help teams make faster, better-informed decisions.</p>
-      <p>My strengths are the places where business, suppliers and technology meet: negotiating terms that work for both sides, structuring data that people can trust and translating executive priorities into plans teams can deliver.</p>
-    </div>
-    <div class="stats reveal">
-      <div class="stat"><div class="n">12+</div><div class="l">years in supply chain, analytics and operations</div></div>
-      <div class="stat"><div class="n">$60M+</div><div class="l">annual spend in the $120M private-label division I support</div></div>
-      <div class="stat"><div class="n">30,000+</div><div class="l">customers served by the catalog portal I own</div></div>
-      <div class="stat"><div class="n">3</div><div class="l">AI agents configured for pricing, marketing and forecasting</div></div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I started as an electrical engineer, then moved into software, an MBA and supply chain consulting. Today I work in the private-label division of an automotive aftermarket distributor with $120M in revenue and $60M+ in annual spend, covering sourcing, supplier negotiation, new product introduction, inventory and product lifecycle.</p>
+        <p>My work spans the full cycle: forecasting demand, running RFI/RFQ/RFP processes, negotiating contracts and tooling terms, launching new products with suppliers and engineering, and retiring products in a way that protects cash. I also own the roadmap for a catalog platform used by thousands of customers and over a hundred suppliers, and I build forecasting models and AI agents that help teams plan with better information.</p>
+        <p>I make decisions with data: total cost of ownership models, forecasts and dashboards, and I bring suppliers, engineering, finance and senior leaders onto the same page. My strengths are the places where business, suppliers and technology meet: negotiating terms that work for both sides, structuring data that people can trust and turning executive priorities into plans teams can deliver.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="n">12+</div><div class="l">years in supply chain, analytics and operations</div></div>
+        <div class="stat"><div class="n">$60M+</div><div class="l">annual spend in the $120M private-label division</div></div>
+        <div class="stat"><div class="n">30,000+</div><div class="l">customers served by the catalog platform I own</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">AI agents configured for pricing, marketing and forecasting</div></div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pratikmehta1612-ops.github.io/sitemap.xml

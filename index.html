@@ -196,6 +196,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 .rec .rw b{font-size:.95rem}.rec .rw span{font-size:.8rem;color:var(--muted)}
 .rec .rw .rel{color:var(--brand);font-weight:600;margin-top:2px}
 @media (max-width:520px){.rec{width:290px}}
+.rec.pj{width:320px}
+.pj .org{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.pj h3{font-size:1.05rem;margin:6px 0 8px}
+.pj p{color:var(--muted);font-size:.9rem;line-height:1.5}
+.pj .metric{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column}
+.pj .metric b{font-size:1.35rem;color:var(--brand);font-weight:800;letter-spacing:-.01em}
+.pj .metric span{font-size:.8rem;color:var(--muted)}
+@media (max-width:520px){.rec.pj{width:280px}}
 </style>
 </head>
 <body>
@@ -418,6 +426,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </section>
 
+<section id="led">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Programs and products</span><h2>Projects I've led</h2><p>Forecasting, analytics products, inventory strategy and sourcing programs, from Bristlecone to LKQ.</p></div>
+  </div>
+  <div class="marquee reveal" id="marquee2" tabindex="0" aria-label="Projects I have led, swipe or scroll sideways">
+    <div class="track" id="track2">
+<article class="rec pj"><div><span class="org">LKQ · 2021–2023</span><h3>ML forecasting engine</h3><p>Python and SQL engine across 6,000+ SKUs using statistical and machine learning methods to forecast demand for planning and inventory teams.</p></div><div class="metric"><b>53% → 74%</b><span>rolling 52-week forecast accuracy</span></div></article>
+<article class="rec pj"><div><span class="org">Bristlecone · 2019–2021</span><h3>Rapid Insights 360</h3><p>Supply chain analytics tool built on SAP Analytics Cloud (SAC) with sub-products Spend 360, Inventory Management 360, Asset Management 360 and FSCA 360. Led a 5-member team from prototype to the SAP App Center.</p></div><div class="metric"><b>5 members</b><span>led from prototype to commercial offering</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>End-of-life and excess inventory strategy</h3><p>Redesigned governance for end-of-life and excess and obsolete inventory, balancing cost, service levels and inventory exposure.</p></div><div class="metric"><b>$15M+</b><span>working capital freed</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>Supplier cost reduction</h3><p>Negotiated supplier cost-sharing and tooling and non-recurring engineering terms across a $25M spend base.</p></div><div class="metric"><b>2% on $25M</b><span>cost reduction secured</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>Catalog management portal</h3><p>Own the roadmap for a catalog platform used by thousands of customers and over a hundred suppliers; write PRDs and work with engineers through release and UAT.</p></div><div class="metric"><b>92%</b><span>data completeness, SEMA Gold recognition</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>Supply chain AI agents</h3><p>Configured three agents: competitor price tracking, marketing asset creation for private-label brands, and forecast accuracy and insights.</p></div><div class="metric"><b>3 agents</b><span>for pricing, marketing and forecasting</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2021–2023</span><h3>Scenario simulation platform</h3><p>Modeled supply and demand risk and bottlenecks in real time so leadership could see issues before they reached operations.</p></div><div class="metric"><b>Real time</b><span>risk and bottleneck visibility</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2021–2023</span><h3>BI transformation</h3><p>Led a Tableau transformation that automated manual reporting and raised trust and adoption of the numbers across the team.</p></div><div class="metric"><b>70%</b><span>faster reporting turnaround, 20+ users</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>Dynamic min-max inventory logic</h3><p>Identified the gap and took the logic, along with a new product tool, from idea through design, build and adoption.</p></div><div class="metric"><b>Idea → adoption</b><span>internal products I initiated</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>Private-label NPI and lifecycle</h3><p>Lead new product introduction, supersession and lifecycle decisions, including spare parts, refurbishment and warranty coordination.</p></div><div class="metric"><b>15 brands</b><span>private-label portfolio supported</span></div></article>
+<article class="rec pj"><div><span class="org">LKQ · 2023–Present</span><h3>A/B testing program</h3><p>Ran A/B tests on promotions, price elasticity and new product launch strategies for private-label brands.</p></div><div class="metric"><b>3 areas</b><span>promotions, pricing, launches</span></div></article>
+<article class="rec pj"><div><span class="org">Ultratech · 2015–2018</span><h3>Energy savings DMAIC project</h3><p>Led a Lean Six Sigma DMAIC project implementing ABB Optimax digital systems and energy dashboards.</p></div><div class="metric"><b>INR 1.5 Cr</b><span>saved each year, 1.3 kWh per ton</span></div></article>
+    </div>
+  </div>
+</section>
+
 <section id="education">
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">Credentials</span><h2>Education &amp; recognition</h2></div>
@@ -477,8 +507,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     location.href="mailto:pratik.mehta1612@gmail.com?subject="+encodeURIComponent("Message from "+n)+"&body="+encodeURIComponent(m+"\n\n"+n+" ("+e+")");
   });
 
-  (function(){
-    var m=document.getElementById("marquee"),t=document.getElementById("track");
+  function initMarquee(mid,tid,speed){
+    var m=document.getElementById(mid),t=document.getElementById(tid);
     if(!m||!t)return;
     var orig=Array.prototype.slice.call(t.children);
     orig.forEach(function(c){var k=c.cloneNode(true);k.setAttribute("aria-hidden","true");t.appendChild(k);});
@@ -497,8 +527,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     window.addEventListener("pointermove",function(e){if(!down)return;m.scrollLeft=sl-(e.clientX-sx);});
     window.addEventListener("pointerup",function(){if(down){down=false;m.classList.remove("drag");pause(1500);}});
     m.scrollLeft=1;
-    if(!reduce){var acc=0;(function step(){if(!paused&&!down){acc+=0.6;if(acc>=1){var d=Math.floor(acc);m.scrollLeft+=d;acc-=d;}}requestAnimationFrame(step);})();}
-  })();
+    if(!reduce){var acc=0;(function step(){if(!paused&&!down){acc+=speed;if(acc>=1){var d=Math.floor(acc);m.scrollLeft+=d;acc-=d;}}requestAnimationFrame(step);})();}
+  }
+  initMarquee("marquee","track",0.6);initMarquee("marquee2","track2",0.5);
 })();
 </script>
 </body>

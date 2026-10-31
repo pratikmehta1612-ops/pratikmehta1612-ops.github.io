@@ -180,6 +180,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 .about p{max-width:none}
 @media (max-width:900px){.about-grid{grid-template-columns:1fr}.portrait{width:150px;height:165px}}
 @media (max-width:480px){.portrait{width:120px;height:132px}.idrow{gap:14px}.widget .n{font-size:1.05rem}}
+
+.sec-head .lnk{color:var(--brand);font-weight:600;border-bottom:1px solid currentColor}
+.marquee{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);padding:6px 0 14px}
+.marquee::-webkit-scrollbar{display:none}
+.marquee.drag{cursor:grabbing;user-select:none}
+.track{display:flex;gap:16px;width:max-content;padding:0 20px}
+.rec{flex:none;width:340px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;gap:16px;white-space:normal}
+.rec blockquote{color:var(--text);font-size:.93rem;line-height:1.55;position:relative}
+.rec figcaption{display:flex;gap:12px;align-items:center;border-top:1px solid var(--line);padding-top:14px}
+.rec .av{flex:none;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+:root[data-theme="dark"] .rec .av{color:#0b1220}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rec .av{color:#0b1220}}
+.rec .rw{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.rec .rw b{font-size:.95rem}.rec .rw span{font-size:.8rem;color:var(--muted)}
+.rec .rw .rel{color:var(--brand);font-weight:600;margin-top:2px}
+@media (max-width:520px){.rec{width:290px}}
 </style>
 </head>
 <body>
@@ -193,6 +209,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -380,6 +397,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </section>
 
+<section id="recommendations">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Recommendations</span><h2>What colleagues and leaders say about me</h2><p>Written recommendations from managers and teammates at LKQ, Bristlecone, Sigmoid and UltraTech. <a class="lnk" href="https://www.linkedin.com/in/pratik-mehta-785b4580/" target="_blank" rel="noopener">Read them on LinkedIn</a></p></div>
+  </div>
+  <div class="marquee reveal" id="marquee" tabindex="0" aria-label="Recommendations, swipe or scroll sideways">
+    <div class="track" id="track">
+<figure class="rec"><blockquote>&ldquo;Pratik is an intelligent, respectful, and reliable team member. He possesses a broad business skill set and demonstrates the ability to operate effectively both at a detailed, tactical level and at a high-level strategic perspective. … Pratik has excelled in business analytics and in managing complex projects within the BI space. He has successfully navigated a demanding corporate environment characterized by diverse cultures and stakeholders. … Pratik is a pleasure to work with, consistently delivering high-quality results. I highly recommend him.&rdquo;</blockquote><figcaption><span class="av">JF</span><span class="rw"><b>Justin Fabbro</b><span>Managing Director</span><span class="rel">Managed Pratik directly &middot; Jul 2025</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik is one of the most professional, reliable, calm, composed, positive attitude person… I worked with him in the same team and could see lot of good improvement that was done by him in a short period on the process front. Which ever team he works for sure he would be a most valuable person and will be great asset to team as well as organisation…&rdquo;</blockquote><figcaption><span class="av">CB</span><span class="rw"><b>Chandrashekar B.S</b><span>Manager, Specialty Product Group, LKQ India</span><span class="rel">Worked on the same team &middot; Apr 2023</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik is a solution provider. His patience, positive attitude and his modesty are his strengths. He has added a lot of value to the team with his expertise in building dashboards and analysing huge data. A very Great team player I must say. Name it and he knows it. His thirst of knowledge is commendable. He keeps learning every day and brings a lot to the table. A great asset to our team.&rdquo;</blockquote><figcaption><span class="av">SS</span><span class="rw"><b>Shalini Subramani</b><span>Manager, Commercial Support Operations</span><span class="rel">Worked on the same team &middot; Apr 2023</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Quick learner, go getter. Great abilities in problem solving. Good narrator. … He has a splendid knowledge about supply chain operations, especially in the area of planning and Inventory management. Along with this his experience in the Analytics and Business Intelligence domain was excellent. Pratik was always approachable and had demonstrated a positive attitude during the course of work. He will surely be a valuable asset to any team.&rdquo;</blockquote><figcaption><span class="av">SE</span><span class="rw"><b>Shreyas ER</b><span>Project Leader, Global Sourcing</span><span class="rel">Worked on the same team &middot; Mar 2023</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik&#x27;s has sound functional knowledge and technical know-how to understand the business requirements in capacity of a business analytics skill and developed multiple models which can cater business needs at a leadership level. His expertise in ML and Tableau helped us to create few critical dashboards, forecasting model and an inventory quality tracker in short span of time, which was a game changer. Pratik certainly can be a valuable asset and he can contribute by himself with the business understanding and his sheer passion to learn more and do more.&rdquo;</blockquote><figcaption><span class="av">PD</span><span class="rw"><b>Prabin Das K</b><span>Supply Chain Leader, LKQ India</span><span class="rel">Managed Pratik directly &middot; Mar 2023</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;I had worked with Pratik during my stint with UltraTech. He has the exposure of IT, manufacturing and consulting domain. The thing I adored about pratik is his people management skill. He handled a team on shopfloor and build a rapport with senior management. His &#x27;definitely can do it&#x27; attitude and being calm and cheerful is what inspired me always. He is definitely an asset to the organization he is associated with.&rdquo;</blockquote><figcaption><span class="av">HS</span><span class="rw"><b>Himanshu Singh</b><span>Manager, PwC Advisory</span><span class="rel">Worked on the same team &middot; Aug 2022</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik is one of best consultant that I have interacted with. His knowledge of the subject matter is immaculate and his understanding of client challenges with the way of handling them is tremendous. He would be an asset in any role in any organization&rdquo;</blockquote><figcaption><span class="av">AS</span><span class="rw"><b>Anindya Sanyal</b><span>Head, SAP Delivery and Competency, Bristlecone India</span><span class="rel">LinkedIn recommendation &middot; Nov 2021</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik was full of energy and willpower while we worked on a six sigma project related to maximisation of WHRS generation. His strong command on Minitab has helped a lot in determining the key factors affecting the output. His analytical skills and inquisitive attitude always show a new dimension in problem solving. It has been a great opportunity to work with him.&rdquo;</blockquote><figcaption><span class="av">YS</span><span class="rw"><b>Yash Srivastava</b><span>Head Digital</span><span class="rel">Worked on the same team &middot; Sep 2021</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik has been a valuable asset to the team. He is flexible, hardworking and an excellent team player. His quest for learning, his systematic approach and ability to quickly learn new technologies and tools will help him to accelerate his growth. … He is your go to guy for any of the techno functional aspect in Analytics space. His process knowledge gives him advantage in all his assignments.&rdquo;</blockquote><figcaption><span class="av">DT</span><span class="rw"><b>Dushyant Tyagi</b><span>Head of Data Analytics, AI &amp; COE, Sigmoid</span><span class="rel">Managed Pratik directly &middot; Aug 2021</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Very sincere at work and quick learner. Always understand customer priorities and makes sure deliverables are on time. Keep up the good work Pratik&rdquo;</blockquote><figcaption><span class="av">MP</span><span class="rw"><b>Mohil Patil</b><span>Senior Project Manager, Cybage Software</span><span class="rel">Managed Pratik directly &middot; Jun 2021</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;Pratik is a talented and creative professional. He has consistently done well in most demanding situation and handle deliverables. He is a real asset for any team.&rdquo;</blockquote><figcaption><span class="av">GF</span><span class="rw"><b>Gaurav Fodekar</b><span>Team Lead, Software Engineer</span><span class="rel">Worked on the same team &middot; Jun 2021</span></span></figcaption></figure>
+<figure class="rec"><blockquote>&ldquo;I have worked with Pratik for an engagement on procurement environment. Pratik&#x27;s understanding on technologies and in-depth view on their implementation impressed me the most. His smart work attitude and in-depth knowledge on the trending technology is definitely an asset to any organization.&rdquo;</blockquote><figcaption><span class="av">NJ</span><span class="rw"><b>Nupoor Joshi</b><span>Delivery Manager, Consumer Insight</span><span class="rel">Worked on the same team &middot; May 2021</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section id="education">
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">Credentials</span><h2>Education &amp; recognition</h2></div>
@@ -438,6 +477,29 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     var n=document.getElementById("n").value,e=document.getElementById("e").value,m=document.getElementById("m").value;
     location.href="mailto:pratik.mehta1612@gmail.com?subject="+encodeURIComponent("Message from "+n)+"&body="+encodeURIComponent(m+"\n\n"+n+" ("+e+")");
   });
+
+  (function(){
+    var m=document.getElementById("marquee"),t=document.getElementById("track");
+    if(!m||!t)return;
+    var orig=Array.prototype.slice.call(t.children);
+    orig.forEach(function(c){var k=c.cloneNode(true);k.setAttribute("aria-hidden","true");t.appendChild(k);});
+    var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches,paused=false,resume=0,down=false,sx=0,sl=0;
+    function half(){return t.scrollWidth/2;}
+    function wrap(){var h=half();if(m.scrollLeft>=h)m.scrollLeft-=h;else if(m.scrollLeft<=0)m.scrollLeft+=h;}
+    function pause(ms){paused=true;clearTimeout(resume);resume=setTimeout(function(){paused=false;},ms);}
+    m.addEventListener("mouseenter",function(){paused=true;clearTimeout(resume);});
+    m.addEventListener("mouseleave",function(){if(!down)pause(300);});
+    m.addEventListener("focusin",function(){paused=true;clearTimeout(resume);});
+    m.addEventListener("focusout",function(){pause(300);});
+    m.addEventListener("touchstart",function(){pause(3000);},{passive:true});
+    m.addEventListener("wheel",function(){pause(2500);},{passive:true});
+    m.addEventListener("scroll",wrap,{passive:true});
+    m.addEventListener("pointerdown",function(e){if(e.pointerType!=="mouse")return;down=true;sx=e.clientX;sl=m.scrollLeft;m.classList.add("drag");});
+    window.addEventListener("pointermove",function(e){if(!down)return;m.scrollLeft=sl-(e.clientX-sx);});
+    window.addEventListener("pointerup",function(){if(down){down=false;m.classList.remove("drag");pause(1500);}});
+    m.scrollLeft=1;
+    if(!reduce){var acc=0;(function step(){if(!paused&&!down){acc+=0.6;if(acc>=1){var d=Math.floor(acc);m.scrollLeft+=d;acc-=d;}}requestAnimationFrame(step);})();}
+  })();
 })();
 </script>
 </body>

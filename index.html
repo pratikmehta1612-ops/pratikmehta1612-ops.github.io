@@ -15,7 +15,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Pratik Mehta","jobTitle":"Supply Chain Manager","url":"https://pratikmehta1612-ops.github.io/","address":{"@type":"PostalAddress","addressLocality":"San Jose","addressRegion":"CA","addressCountry":"US"},"sameAs":["https://linkedin.com/in/pratik-mehta-785b4580","https://github.com/pratikmehta1612-ops"],"knowsAbout":["Strategic sourcing","Supplier management","Inventory optimization","Demand forecasting","Product lifecycle management"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f6f8fb; --surface:#ffffff; --surface-2:#eef2f8; --text:#0f172a; --muted:#475569;
@@ -55,7 +55,7 @@ nav a:hover{background:var(--surface-2);color:var(--text)}
 .hero{padding:64px 0 40px}
 .hero-grid>*,.contact-grid>*{min-width:0}
 .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
-.eyebrow{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--brand-2);letter-spacing:.04em}
+.eyebrow{font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
 h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:10px 0 14px}
 h1 .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{color:var(--muted);font-size:1.08rem;max-width:56ch}
@@ -98,7 +98,7 @@ section{padding:56px 0}
 .badge{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem}
 .job h3{font-size:1.08rem}
 .job .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;color:var(--muted);font-size:.9rem;margin:2px 0 10px}
-.job .date{font-family:"JetBrains Mono",monospace;font-size:.82rem}
+.job .date{font-size:.82rem;font-weight:600;color:var(--brand)}
 .job ul{padding-left:18px;color:var(--muted);display:grid;gap:6px;font-size:.95rem}
 .job li strong{color:var(--text);font-weight:600}
 
@@ -148,8 +148,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   .skill-groups,.edu,.projects{grid-template-columns:1fr}
   .job{grid-template-columns:1fr}
   .badge{width:46px;height:46px}
-  .widgets{grid-template-columns:1fr 1fr}
+  .widgets{grid-template-columns:1fr 1fr 1fr}
 }
+
+.portrait{position:relative;aspect-ratio:4/4.4;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,var(--brand),var(--brand-2));border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.portrait .ini{display:none}
+.portrait.nophoto{display:grid;place-items:center}
+.portrait.nophoto .ini{display:block;color:#fff;font-weight:800;font-size:4rem;letter-spacing:.04em}
+.who{margin:14px 0 0}.who b{display:block;font-size:1.1rem}.who span{color:var(--muted);font-size:.92rem}
+.flowsec{padding:20px 0 8px}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.step{padding:18px 16px;position:relative;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step .no{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.step h3{font-size:.95rem;margin-bottom:2px}
+.step p{font-size:.8rem;color:var(--muted);line-height:1.4}
+.step::after{content:"";position:absolute;right:-1px;top:30px;width:10px;height:10px;background:var(--surface);border-top:1px solid var(--line);border-right:1px solid var(--line);transform:translateX(50%) rotate(45deg);z-index:1}
+.step:last-child::after{display:none}
+.job li{line-height:1.5}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,1fr)}.step{border-bottom:1px solid var(--line)}.step::after{display:none}}
+@media (max-width:520px){.flow{grid-template-columns:1fr}}
+.hero{background:radial-gradient(900px 300px at 85% -10%,var(--glow),transparent)}
 </style>
 </head>
 <body>
@@ -175,7 +195,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">// hello, I'm Pratik 👋</span>
+      <span class="eyebrow">Supply chain manager · San Jose, CA</span>
       <h1>Running <span class="grad">resilient supply chains</span>: sourcing, suppliers and inventory.</h1>
       <p class="lead">Supply chain manager with 12+ years across the automotive aftermarket, consulting and manufacturing. I lead sourcing, supplier management and inventory strategy for a private-label division with $120M in revenue and $60M+ in annual spend, turning supplier and inventory challenges into lower cost, healthier inventory and reliable supply.</p>
       <div class="cta">
@@ -188,28 +208,34 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       </div>
     </div>
 
-    <aside class="card-hero reveal" aria-label="Snapshot">
-      <div class="avatar">
-        <div class="pic"><img src="photo.jpg" alt="Pratik Mehta" onerror="this.remove();this.parentNode.textContent='PM'"></div>
-        <div><b>Pratik Praveen Mehta</b><span>San Jose, California</span></div>
-      </div>
-<pre class="code"><span class="k">role</span>:   <span class="s">"Supply Chain Manager"</span>
-<span class="k">focus</span>:  [<span class="s">"Strategic sourcing"</span>,
-         <span class="s">"Catalog platforms"</span>,
-         <span class="s">"Forecasting & AI agents"</span>]
-<span class="k">impact</span>: <span class="s">"$15M+ working capital freed"</span></pre>
+    <aside class="card-hero reveal" aria-label="Profile">
+      <div class="portrait"><img src="photo.jpg" alt="Pratik Mehta, Supply Chain Manager" onerror="this.parentNode.classList.add('nophoto');this.remove()"><span class="ini">PM</span></div>
+      <div class="who"><b>Pratik Praveen Mehta</b><span>Supply Chain Manager · Private Label</span></div>
       <div class="widgets">
+        <div class="widget"><div class="n">$120M</div><div class="l">division revenue</div></div>
+        <div class="widget"><div class="n">$60M+</div><div class="l">annual spend</div></div>
         <div class="widget"><div class="n">$15M+</div><div class="l">working capital freed</div></div>
-        <div class="widget"><div class="n">$60M+</div><div class="l">annual spend managed</div></div>
-        <div class="widget"><div class="n">74%</div><div class="l">forecast accuracy (from 53%)</div></div>
       </div>
     </aside>
   </div>
 </section>
 
+<section class="flowsec">
+  <div class="wrap">
+    <div class="flow reveal" aria-label="End-to-end supply chain coverage">
+      <div class="step"><span class="no">1</span><h3>Plan</h3><p>Demand forecasting, S&amp;OP support, inventory targets</p></div>
+      <div class="step"><span class="no">2</span><h3>Source</h3><p>RFI / RFQ / RFP, TCO models, supplier selection</p></div>
+      <div class="step"><span class="no">3</span><h3>Contract</h3><p>Negotiation through signature, tooling and NRE terms</p></div>
+      <div class="step"><span class="no">4</span><h3>Launch</h3><p>New product introduction with suppliers and engineering</p></div>
+      <div class="step"><span class="no">5</span><h3>Perform</h3><p>Supplier quality, corrective actions, delivery</p></div>
+      <div class="step"><span class="no">6</span><h3>Sustain</h3><p>Supersession, end-of-life and excess inventory</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="about" class="about">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// about</span><h2>About me</h2></div>
+    <div class="sec-head reveal"><span class="eyebrow">About</span><h2>About me</h2></div>
     <div class="reveal">
       <p>I started as an electrical engineer, then moved into software, an MBA and supply chain consulting. Today I work in the private-label division of an automotive aftermarket distributor with $120M in revenue and $60M+ in annual spend, covering sourcing, supplier negotiation, new product introduction, inventory and product lifecycle.</p>
       <p>I also own the roadmap for a catalog platform used by thousands of customers and over a hundred suppliers, and I build forecasting models and AI agents that help teams make faster, better-informed decisions.</p>
@@ -226,7 +252,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// experience</span><h2>Where I've worked</h2><p>Most recent first.</p></div>
+    <div class="sec-head reveal"><span class="eyebrow">Experience</span><h2>Where I've worked</h2><p>Most recent first.</p></div>
     <div class="timeline">
 
       <article class="job reveal">
@@ -235,11 +261,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
           <h3>Senior Business Process Specialist, Supply Chain Strategy &amp; Operations</h3>
           <div class="meta"><span>LKQ Corporation · San Jose, CA</span><span class="date">May 2023 – Present</span></div>
           <ul>
-            <li>Lead <strong>sourcing and supplier management</strong> for a private-label division with <strong>$120M in revenue and $60M+ in annual spend</strong>, working with suppliers and contract manufacturers; run RFI/RFQ/RFP processes and TCO models and negotiate contracts through signature.</li>
-            <li>Secured a <strong>2% cost reduction on $25M in spend</strong> through supplier cost-sharing, and freed <strong>$15M+ in working capital</strong> by redesigning end-of-life and excess inventory strategy.</li>
-            <li>Own the strategy and roadmap for a <strong>catalog management portal</strong> serving 30,000+ customers and 120+ suppliers; drove <strong>92% data completeness</strong> and Gold-level data quality recognition for brands from SEMA.</li>
-            <li>Lead new product introduction, run RFQs and total-cost-of-ownership models, and ran <strong>A/B tests</strong> on promotions, price elasticity and launch strategies.</li>
-            <li>Lead a team of <strong>4 direct and 3 indirect reports</strong> with a formal intake, prioritization and delivery governance process; brief the VP, SVP, CFO and CEO.</li>
+            <li>Lead <strong>sourcing and supplier management</strong> for a private-label division with <strong>$120M in revenue and $60M+ in annual spend</strong>, working with suppliers and contract manufacturers; run RFI/RFQ/RFP processes and TCO models and negotiate contracts through signature, including tooling and non-recurring engineering (NRE) terms.</li>
+            <li>Secured a <strong>2% cost reduction on $25M in spend</strong> through supplier cost-sharing and tooling and NRE negotiation.</li>
+            <li>Freed <strong>$15M+ in working capital</strong> by redesigning end-of-life and excess &amp; obsolete inventory strategy and governance.</li>
+            <li>Serve as the escalation point for supplier quality and delivery issues through Critical Action Plans; manage Approved Vendor List (AVL) qualification and supplier performance.</li>
+            <li>Lead <strong>new product introduction</strong>, product supersession and lifecycle decisions, using lifecycle analytics to decide SKU introduction, continuation and end-of-life; coordinate spare parts, refurbishment and warranty returns.</li>
+            <li>Identified gaps that became new internal products: an <strong>ML-based forecasting program</strong>, a new product tool and <strong>dynamic min-max inventory logic</strong>, each taken from idea through design, build and adoption.</li>
+            <li>Apply statistical and ML forecasting to demand and supply planning, using retail channel data such as EDI and POS to improve availability and inventory decisions.</li>
+            <li>Ran <strong>A/B tests</strong> on promotions, price elasticity and new product launch strategies for private-label brands.</li>
+            <li>Own the roadmap for a <strong>catalog management portal</strong> serving 30,000+ customers and 120+ suppliers; reached <strong>92% data completeness</strong>, with brands recognized at SEMA Gold level for data quality.</li>
+            <li>Brief the VP Category Management, VP IT, SVP, CFO and CEO on supplier performance, cost and supply risk through Tableau and Power BI dashboards across 15 private-label brands.</li>
+            <li>Lead a team of <strong>4 direct and 3 indirect reports</strong> with a formal intake, prioritization and delivery governance process.</li>
           </ul>
         </div>
       </article>
@@ -250,8 +282,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
           <h3>Inventory Process Specialist, Supply Chain Optimization</h3>
           <div class="meta"><span>LKQ Corporation · Bengaluru, India</span><span class="date">Oct 2021 – Mar 2023</span></div>
           <ul>
-            <li>Built a Python and SQL <strong>forecasting engine across 6,000+ SKUs</strong>, lifting rolling 52-week forecast accuracy from <strong>53% to 74%</strong>.</li>
-            <li>Led a Tableau <strong>BI transformation</strong> that cut reporting turnaround by 70% and raised adoption across 20+ colleagues; built a scenario simulation platform for supply and demand risk.</li>
+            <li>Built a Python and SQL <strong>forecasting engine across 6,000+ SKUs</strong> using statistical and ML methods, lifting rolling 52-week forecast accuracy from <strong>53% to 74%</strong>.</li>
+            <li>Built a <strong>scenario simulation platform</strong> to model supply and demand risk and bottlenecks in real time, giving leadership early visibility before issues reached operations.</li>
+            <li>Led a Tableau <strong>BI transformation</strong> that automated manual reporting, cutting turnaround time by <strong>70%</strong> and raising adoption across 20+ colleagues.</li>
+            <li>Owned dashboards, MIS reporting and SQL data warehousing that gave planning and inventory teams one trusted view of the numbers.</li>
+            <li>Led and developed <strong>4 direct and 3 indirect reports</strong> (Business Analysts), setting priorities and coaching the team.</li>
           </ul>
         </div>
       </article>
@@ -262,9 +297,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
           <h3>Senior Consultant, Supply Chain Analytics &amp; Transformation</h3>
           <div class="meta"><span>Bristlecone Ltd. · Bengaluru, India</span><span class="date">Jun 2019 – Sep 2021</span></div>
           <ul>
-            <li>Owned the roadmap of <strong>Rapid Insights 360</strong>, a supply chain analytics product, and led a 5-person team from prototype to commercial offerings on the <strong>SAP App Center</strong>.</li>
-            <li>Ran pre-sales and demos across CPG, semiconductor, healthcare, financial services and energy, and led 3+ engagements worth $500K–$2M.</li>
-            <li>Advised on SAP IBP and Kinaxis implementations and built ML forecasting models with PyCaret.</li>
+            <li>Led a <strong>5-member cross-functional team</strong> to build <strong>Rapid Insights 360</strong>, a supply chain analytics product, taking it from prototype through introduction to commercial offerings on the <strong>SAP App Center</strong> and laying the foundation for a new Analytics &amp; AI Practice Center of Excellence.</li>
+            <li>Architected the product on a data warehouse layer so it ran on SAP and Oracle ERP and stayed compatible with other ERP and data systems; separated reusable core capabilities from client-specific configuration.</li>
+            <li>Built reusable accelerators, frameworks and dashboards in Power BI, Tableau, Qlik Sense, Sisense and SAP SAC, used by pre-sales teams and shared with customers.</li>
+            <li>Ran pre-sales and product demonstrations for 18–20 prospects across CPG, semiconductor, healthcare, financial services and energy.</li>
+            <li>Presented to CPOs, CTOs, SVPs and VPs at Fortune 500 accounts and led <strong>3+ end-to-end engagements ($500K–$2M)</strong> from proposals through delivery and hypercare.</li>
+            <li>Built ML forecasting models with PyCaret; advised on SAP IBP, Kinaxis and SAP procurement implementations and supported a material and BoM readiness engagement for an enterprise hardware client.</li>
           </ul>
         </div>
       </article>
@@ -275,8 +313,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
           <h3>Front Lead Engineer</h3>
           <div class="meta"><span>Ultratech Cements, Aditya Birla Group · India</span><span class="date">Sep 2015 – Apr 2018</span></div>
           <ul>
-            <li>Built SAP-based MIS dashboards that helped reduce working capital in slow-moving assets by <strong>28%</strong>.</li>
-            <li>Led a <strong>Lean Six Sigma DMAIC</strong> project that cut energy use by 1.3 kWh per ton and saved INR 1.5 crore a year.</li>
+            <li>Built centralized, SAP-based <strong>MIS and governance dashboards</strong> on the plant floor for plant heads across multiple locations.</li>
+            <li>Helped plant heads reduce <strong>working capital tied in slow-moving assets by 28%</strong>.</li>
+            <li>Led a <strong>Lean Six Sigma DMAIC</strong> project implementing ABB Optimax digital systems and energy dashboards.</li>
+            <li>Cut energy consumption by <strong>1.3 kWh per ton</strong>, saving <strong>INR 1.5 crore a year</strong>.</li>
+            <li>Applied the project to earn the Lean Six Sigma Green Belt certification.</li>
           </ul>
         </div>
       </article>
@@ -298,7 +339,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// skills</span><h2>What I work with</h2></div>
+    <div class="sec-head reveal"><span class="eyebrow">Capabilities</span><h2>What I work with</h2></div>
     <div class="skill-groups reveal">
       <div class="sg"><h3>Sourcing &amp; supplier management</h3><div class="tags">
         <span class="tag">Strategic sourcing</span><span class="tag">RFI / RFQ / RFP</span><span class="tag">Contract negotiation</span><span class="tag">Total cost of ownership</span><span class="tag">Tooling &amp; NRE</span><span class="tag">Supplier quality (AVL, CAP)</span><span class="tag">Contract manufacturers</span></div></div>
@@ -314,7 +355,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// projects</span><h2>Selected work</h2><p>Programs and products I've owned or built.</p></div>
+    <div class="sec-head reveal"><span class="eyebrow">Selected work</span><h2>Selected work</h2><p>Programs and products I've owned or built.</p></div>
     <div class="projects">
       <article class="proj reveal"><div class="thumb t1">Catalog Portal</div><div class="body"><h3>Catalog management portal</h3><p>Owner of the strategy and roadmap for a portal serving 30,000+ customers and 120+ suppliers; 92% data completeness and Gold-level data quality recognition.</p><div class="tags"><span class="tag">Product</span><span class="tag">Data quality</span><span class="tag">Roadmap</span></div></div></article>
       <article class="proj reveal"><div class="thumb t2">Rapid Insights 360</div><div class="body"><h3>Rapid Insights 360</h3><p>Supply chain analytics product taken from prototype to commercial offerings on the SAP App Center, with reusable accelerators for pre-sales.</p><div class="tags"><span class="tag">SaaS</span><span class="tag">SAP</span><span class="tag">Power BI / Tableau</span></div></div></article>
@@ -328,7 +369,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <section id="education">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// education</span><h2>Education &amp; recognition</h2></div>
+    <div class="sec-head reveal"><span class="eyebrow">Credentials</span><h2>Education &amp; recognition</h2></div>
     <div class="edu reveal">
       <div class="e"><h3>MBA (Post Graduate Program), Marketing</h3><div class="m">Great Lakes Institute of Management · Chennai, India</div></div>
       <div class="e"><h3>B.E., Electrical Engineering</h3><div class="m">Government College of Engineering, Chandrapur · R.T.M. Nagpur University, India</div></div>
@@ -346,10 +387,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="eyebrow">// contact</span><h2>Let's talk</h2></div>
+    <div class="sec-head reveal"><span class="eyebrow">Contact</span><h2>Let's talk</h2></div>
     <div class="contact-grid reveal">
       <div>
-        <p>I'm always glad to talk about supply chain, sourcing, catalog platforms or AI in operations. The quickest way to reach me is by email or LinkedIn.</p>
+        <p>I'm glad to talk about supply chain, sourcing, supplier management or inventory strategy. The quickest way to reach me is by email or LinkedIn.</p>
         <div class="cta"><a class="btn primary" href="mailto:pratik.mehta1612@gmail.com">Email me</a><a class="btn" href="https://linkedin.com/in/pratik-mehta-785b4580" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
       <form id="msgForm" aria-label="Quick message">
